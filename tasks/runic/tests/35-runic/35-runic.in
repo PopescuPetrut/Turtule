@@ -1,0 +1,10 @@
+LOAD files/images/blank_600x120.ppm
+FONT files/fonts/ncenB24.bdf
+TYPE "The time has come" 20 60 0 255 0
+UNDO
+UNDO
+TYPE "The time has come" 20 60 0 255 0
+REDO
+REDO
+SAVE tasks/runic/tests/35-runic/35-runic.out.ppm
+EXIT

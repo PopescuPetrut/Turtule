@@ -1,0 +1,5 @@
+LOAD files/images/blank_200x200.ppm
+FONT files/fonts/HaxorMedium-12.bdf
+TYPE "Arcane title" 10 30 0 255 0
+SAVE tasks/runic/tests/25-runic/25-runic.out.ppm
+EXIT

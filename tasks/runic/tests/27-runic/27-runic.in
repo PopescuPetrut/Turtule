@@ -1,0 +1,7 @@
+LOAD files/images/blank_200x200.ppm
+FONT files/fonts/scientifica-11.bdf
+TYPE "First" 20 60 0 0 0
+SAVE tasks/runic/tests/27-runic/27-runic-1.out.ppm
+UNDO
+SAVE tasks/runic/tests/27-runic/27-runic-2.out.ppm
+EXIT

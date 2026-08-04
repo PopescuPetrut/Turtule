@@ -1,0 +1,5 @@
+LSYSTEM files/lsystems/plant.lsys
+LOAD files/images/blank_800x800.ppm
+TURTLE 400 50 8 90 25 5 0 0 0
+SAVE tasks/runic/tests/18-runic/18-runic.out.ppm
+EXIT

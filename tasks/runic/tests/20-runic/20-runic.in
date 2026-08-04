@@ -1,0 +1,5 @@
+LSYSTEM files/lsystems/burst.lsys
+LOAD files/images/blank_800x800.ppm
+TURTLE 20 10 1 0 90 7 0 0 0
+SAVE tasks/runic/tests/20-runic/20-runic.out.ppm
+EXIT

@@ -1,0 +1,5 @@
+LSYSTEM files/lsystems/line.lsys
+LOAD files/images/blank_200x200.ppm
+TURTLE 100 100 40 90 0 0 0 0 0
+SAVE tasks/runic/tests/11-runic/11-runic.out.ppm
+EXIT

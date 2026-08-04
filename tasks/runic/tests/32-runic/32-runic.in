@@ -1,0 +1,5 @@
+LOAD files/images/blank_800x600.ppm
+FONT files/fonts/horse.bdf
+TYPE "A" -1800 -1600 0 0 0
+SAVE tasks/runic/tests/32-runic/horse.out.ppm
+EXIT

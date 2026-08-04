@@ -1,0 +1,5 @@
+LOAD files/images/blank_200x200.ppm
+FONT files/fonts/scientifica-11.bdf
+TYPE "Offscreen" 50 250 255 0 0
+SAVE tasks/runic/tests/26-runic/26-runic.out.ppm
+EXIT

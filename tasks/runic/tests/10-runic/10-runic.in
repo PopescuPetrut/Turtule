@@ -1,0 +1,7 @@
+LSYSTEM files/lsystems/simple.lsys
+LSYSTEM files/lsystems/fib.lsys
+UNDO
+LSYSTEM files/lsystems/long_axiom.lsys
+REDO
+DERIVE 1
+EXIT

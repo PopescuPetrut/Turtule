@@ -1,0 +1,28 @@
+LOAD files/images/blank_800x800.ppm
+FONT files/fonts/ncenB24.bdf
+TYPE "Layer One" 50 80 255 255 255
+SAVE tasks/runic/tests/38-runic/38-runic-1.out.ppm
+LSYSTEM files/lsystems/branch.lsys
+TURTLE 400 60 40 90 45 1 0 0 0
+SAVE tasks/runic/tests/38-runic/38-runic-2.out.ppm
+LSYSTEM files/lsystems/plant.lsys
+TURTLE 400 60 8 90 25 3 0 0 0
+SAVE tasks/runic/tests/38-runic/38-runic-3.out.ppm
+FONT files/fonts/scientifica-11.bdf
+TYPE "Forest Gate" 260 120 0 255 128
+SAVE tasks/runic/tests/38-runic/38-runic-4.out.ppm
+UNDO
+TYPE "Forest Title" 260 140 0 255 128
+UNDO
+UNDO
+REDO
+TYPE "A weird label" 260 100 255 255 0
+LOAD blank_800x600.ppm
+UNDO
+REDO
+TYPE "New start" 50 50 255 0 0
+UNDO
+LSYSTEM files/lsystems/line.lsys
+TURTLE 100 100 40 90 0 0 0 0 0
+SAVE tasks/runic/tests/38-runic/38-runic-5.out.ppm
+EXIT

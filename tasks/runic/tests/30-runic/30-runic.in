@@ -1,0 +1,11 @@
+LOAD files/images/blank_800x800.ppm
+LSYSTEM files/lsystems/plant.lsys
+TURTLE 400 20 8 90 25 4 0 0 0
+FONT files/fonts/scientifica-11.bdf
+TYPE "Left" 10 30 255 0 0
+TYPE "Right" 700 30 0 0 255
+UNDO
+SAVE tasks/runic/tests/30-runic/30-runic-1.out.ppm
+REDO
+SAVE tasks/runic/tests/30-runic/30-runic-2.out.ppm
+EXIT

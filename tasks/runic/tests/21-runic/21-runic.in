@@ -1,0 +1,8 @@
+LOAD files/images/blank_800x800.ppm
+LSYSTEM files/lsystems/plant.lsys
+TURTLE 200 60 6 90 50 5 0 0 0
+TURTLE 600 60 6 90 15 5 0 0 0
+LSYSTEM files/lsystems/snowflake.lsys
+TURTLE 330 650 4 0 60 3 0 0 0
+SAVE tasks/runic/tests/21-runic/21-runic.out.ppm
+EXIT

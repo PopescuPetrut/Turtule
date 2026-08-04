@@ -1,0 +1,5 @@
+LOAD files/images/small_19x24.ppm
+FONT files/fonts/j.bdf
+TYPE "jj" 3 7 0 128 0
+SAVE tasks/runic/tests/31-runic/31-runic.out.ppm
+EXIT

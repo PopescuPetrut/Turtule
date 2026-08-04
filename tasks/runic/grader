@@ -1,0 +1,75 @@
+#!/usr/bin/python3
+import inspect
+import pathlib
+import os
+import sys
+
+current_dir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+root_dir = pathlib.Path(current_dir).parent.parent
+sys.path.insert(0, str(root_dir))
+
+from check_utils.grader import Grader
+
+def images_similar(image1: bytes, image2: bytes, inverse_threshold=20000):
+    if len(image1) != len(image2):
+        return False
+    
+    first_newl = image2.find(b'\n', 3)
+    ws, hs = image2[3:first_newl].split(b' ')
+    w, h = int(ws), int(hs)
+    header_end = image2.find(b'\n', first_newl + 1) + 1
+
+    if image1[:header_end] != image2[:header_end]:
+        return False
+    
+    px1 = image1[header_end:]
+    px2 = image2[header_end:]
+    
+    diff = sum(1 for i in range(0, len(px1), 3) if px1[i:i+3] != px2[i:i+3])
+    return diff <= (w * h + inverse_threshold - 1) // inverse_threshold
+
+
+class GenericGrader(Grader):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def grade_test(self):
+        input, output, ref = self.read()
+
+        if len(output) != len(ref):
+            self.exit(code=-1, err=f'Number of lines mismatch: output={len(output)} vs ref={len(ref)}')
+
+        for i, (out_line, ref_line) in enumerate(zip(output, ref)):
+            if out_line.strip() != ref_line.strip():
+                self.exit(code=-1, err=f'Line {i+1} mismatch: output="{out_line.strip()}" vs ref="{ref_line.strip()}"')
+        
+        test_dir = os.path.dirname(self.input_path)
+
+        for filename in os.listdir(test_dir):
+            if filename.endswith('.ref.ppm'):
+                ref_ppm_path = os.path.join(test_dir, filename)
+                out_ppm_path = os.path.join(test_dir, filename.replace('.ref.ppm', '.out.ppm'))
+
+                out_ppm_basename = os.path.basename(out_ppm_path)
+                ref_ppm_basename = os.path.basename(ref_ppm_path)
+
+                with open(ref_ppm_path, 'rb') as f:
+                    ref_ppm = f.read()
+                try:
+                    with open(out_ppm_path, 'rb') as f:
+                        out_ppm = f.read()
+                except:
+                    self.exit(code=-1, err=f'Text output is correct but image {out_ppm_basename} is missing')
+
+                if not images_similar(out_ppm, ref_ppm):
+                    self.exit(code=-1, err=f'Text output is correct but image mismatch: output={out_ppm_basename} vs ref={ref_ppm_basename}')
+
+        self.add_points(self.max_points)
+
+
+if __name__ == '__main__':
+    assert len(sys.argv) >= 5, f'Expected at least 5 arguments, got {len(sys.argv)}: {sys.argv}'
+    
+    grader = GenericGrader(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    grader.run()
+

@@ -1,0 +1,22 @@
+LOAD files/images/blank_800x800.ppm
+FONT files/fonts/HaxorMedium-12.bdf
+TYPE "Rune Alpha" 300 550 255 255 255
+LSYSTEM files/lsystems/plant.lsys
+TURTLE 400 40 8 90 25 4 50 168 82
+SAVE tasks/runic/tests/37-runic/37-runic-1.out.ppm
+TYPE "Label 1" 360 120 255 200 0
+UNDO
+TYPE "Forest I" 340 130 0 255 0
+LSYSTEM files/lsystems/branch.lsys
+TURTLE 200 40 10 90 45 2 176 176 176
+TURTLE 600 40 10 90 45 2 73 204 167
+SAVE tasks/runic/tests/37-runic/37-runic-2.out.ppm
+UNDO
+UNDO
+REDO
+LOAD files/images/blank_800x600.ppm
+UNDO
+TYPE "After undo" 20 20 255 255 0
+SAVE tasks/runic/tests/37-runic/37-runic-3.out.ppm
+REDO
+EXIT

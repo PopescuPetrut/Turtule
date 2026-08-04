@@ -1,0 +1,6 @@
+Loaded files/images/small_2x2.ppm (PPM image 2x2)
+Warning: pixel at (0, 1) may be read as (126, 128, 0)
+Warning: pixel at (0, 1) may be read as (119, 128, 0)
+Warning: pixel at (1, 1) may be read as (3, 192, 0)
+Warning: pixel at (0, 0) may be read as (0, 0, 3)
+Warning: pixel at (1, 0) may be read as (192, 0, 14)

@@ -1,0 +1,5 @@
+LOAD files/images/blank_200x200.ppm
+FONT files/fonts/scientifica-11.bdf
+TYPE "Runes" 40 90 0 0 0
+SAVE tasks/runic/tests/24-runic/24-runic.out.ppm
+EXIT

@@ -1,0 +1,7 @@
+LOAD files/images/blank_800x800.ppm
+LSYSTEM files/lsystems/plant.lsys
+TURTLE 100 20 8 90 25 4 0 0 0
+FONT files/fonts/peep-10x20.bdf
+TYPE "https://www.youtube.com/watch?v=dQw4w9WgXcQ" 200 100 255 0 0
+SAVE tasks/runic/tests/29-runic/29-runic.out.ppm
+EXIT

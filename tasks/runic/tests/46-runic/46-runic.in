@@ -1,0 +1,3 @@
+LOAD files/images/random_100x100.ppm
+BITCHECK
+EXIT

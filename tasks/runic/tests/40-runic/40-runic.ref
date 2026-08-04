@@ -1,0 +1,4 @@
+Loaded files/images/small_1x2.ppm (PPM image 1x2)
+Warning: pixel at (0, 1) may be read as (0, 0, 0)
+Warning: pixel at (0, 0) may be read as (0, 255, 253)
+Warning: pixel at (0, 0) may be read as (32, 255, 255)

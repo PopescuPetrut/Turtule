@@ -1,0 +1,9 @@
+LOAD files/images/blank_600x120.ppm
+FONT files/fonts/ncenB24.bdf
+TYPE "The time has come" 20 60 0 255 0
+FONT files/fonts/courB18.bdf
+TYPE "They are watching" 20 36 255 255 0
+FONT files/fonts/gohufont-11.bdf
+TYPE "The quick brown fox jumps over the lazy dog. `~!@#$%^&*()-_=+[]{}\|;:',.<>/?" 20 20 255 0 255
+SAVE tasks/runic/tests/34-runic/34-runic.out.ppm
+EXIT

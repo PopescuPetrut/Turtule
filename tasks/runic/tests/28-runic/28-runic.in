@@ -1,0 +1,7 @@
+LOAD files/images/blank_200x200.ppm
+FONT files/fonts/scientifica-11.bdf
+TYPE "Again" 30 70 0 0 0
+UNDO
+REDO
+SAVE tasks/runic/tests/28-runic/28-runic.out.ppm
+EXIT

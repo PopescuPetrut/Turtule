@@ -1,0 +1,3 @@
+LOAD files/images/small_2x1.ppm
+BITCHECK
+EXIT
