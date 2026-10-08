@@ -1,4 +1,4 @@
-// Popescu Petrut - Alin 312CA
+// Popescu Petrut - Alin
 #include "runic.h"
 
 // This is the most important function i like to call the "GOD FUNCTION",
@@ -71,12 +71,6 @@ void process_command(char *command, LSYSTEM *current_ls, MANAGER *undo_manager,
 				 copy_ppm(*current_ppm), CMD_TURTLE);
 			clear_MANAGER(redo_manager);
 			turtle(command, current_ls, current_ppm);
-		}
-	} else if (strcmp(command, "BITCHECK") == 0) {
-		if (!current_ppm->image) {
-			printf("No image loaded\n");
-		} else {
-			bitcheck(current_ppm);
 		}
 	}
 }

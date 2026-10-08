@@ -1,4 +1,4 @@
-// Popescu Petrut - Alin 312CA
+// Popescu Petrut - Alin
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -68,7 +68,6 @@ void draw_line(double start_x, double start_y, double stop_x, double stop_y,
 			   PPM *image, PIXEL color);
 void turtle(char *command, LSYSTEM *current_ls, PPM *current_ppm);
 PPM copy_ppm(PPM a);
-void bitcheck(PPM *ppm);
 void LSYSTEM_PROCESS(char *command, LSYSTEM *current_ls, MANAGER *undo_manager,
 					 MANAGER *redo_manager, PPM *current_ppm);
 void DERIVE_PROCESS(char *command, LSYSTEM *current_ls);

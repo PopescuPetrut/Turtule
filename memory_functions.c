@@ -1,4 +1,4 @@
-// Popescu Petrut - Alin 312CA
+// Popescu Petrut - Alin
 #include "runic.h"
 
 char *string_allocation(int dim)
