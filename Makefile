@@ -1,17 +1,25 @@
-# Compiler setup.
-CC=gcc
-CFLAGS=-Wall -Wextra -std=c99
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c99 -g
+LDLIBS = -lm
 
-TARGETS=runic
+TARGET = lsystem
+SRCS = runic.c memory_functions.c undo_redo.c system_process.c LSYSTEM.c turtule.c
+HEADERS = runic.h
 
-# Manually define all targets.
-build: $(TARGETS)
+.PHONY: build run memcheck clean
 
-runic: runic.c memory_functions.c runic.h undo_redo.c system_process.c
-	$(CC) $(CFLAGS) runic.c memory_functions.c undo_redo.c system_process.c  LSYSTEM.c turtule.c -lm -o runic
+build: $(TARGET)
 
-# Clean the solution.
+$(TARGET): $(SRCS) $(HEADERS)
+	$(CC) $(CFLAGS) $(SRCS) $(LDLIBS) -o $(TARGET)
+
+# Render the example fractals (plant.ppm, snowflake.ppm, dragon.ppm)
+run: $(TARGET)
+	./$(TARGET) < examples/demo_commands.txt
+
+# Run the demo under Valgrind and fail on any leak or memory error
+memcheck: $(TARGET)
+	valgrind --leak-check=full --error-exitcode=1 ./$(TARGET) < examples/demo_commands.txt
+
 clean:
-	rm -f $(TARGETS)
-
-.PHONY: pack clean
+	rm -f $(TARGET) *.ppm
