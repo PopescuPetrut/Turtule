@@ -1,0 +1,16 @@
+LSYSTEM examples/plant.lsys
+DERIVE 1
+LOAD examples/blank_600x600.ppm
+TURTLE 300 10 3 90 25 6 34 120 50
+SAVE plant.ppm
+LSYSTEM examples/snowflake.lsys
+LOAD examples/blank_600x600.ppm
+TURTLE 90 430 5 0 60 4 30 80 200
+SAVE snowflake.ppm
+LSYSTEM examples/dragon.lsys
+LOAD examples/blank_600x600.ppm
+TURTLE 380 200 6 0 90 11 200 50 50
+SAVE dragon.ppm
+UNDO
+REDO
+EXIT
