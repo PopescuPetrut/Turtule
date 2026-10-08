@@ -1,3 +1,0 @@
-LOAD files/images/blank_400x400.ppm
-TYPE "Hello runes" 50 80 255 255 255
-EXIT

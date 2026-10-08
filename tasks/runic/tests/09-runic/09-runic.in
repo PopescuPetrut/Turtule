@@ -1,6 +1,0 @@
-LSYSTEM files/lsystems/simple.lsys
-LSYSTEM files/lsystems/fib.lsys
-DERIVE 1
-UNDO
-DERIVE 1
-EXIT
